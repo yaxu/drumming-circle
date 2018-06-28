@@ -1,0 +1,13 @@
+#!/usr/bin/python
+
+# from matplotlib.dates import epoch2num, date2num
+import matplotlib.pyplot as plt
+import numpy as np
+import io
+
+day = 1529971200
+
+f = io.open("/home/alex/src/drumming-circle/logs/drum1.json")
+ls = f.readlines()
+
+whens = filter(lambda x: x > 0, map(lambda j: json.loads(j)['cWhen'] - day, filter(lambda s: not s.startswith("//"), ls)))
