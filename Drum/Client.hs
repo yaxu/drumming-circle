@@ -41,10 +41,10 @@ snapshot snapName =
                                                      msg <- WS.receiveData conn
                                                      putStrLn $ T.unpack msg
 
-replay sessionName =
+replay sessionName offset =
   do addr <- fromMaybe "127.0.0.1" <$> lookupEnv "CIRCLE_ADDR"
      port <- fromMaybe "6010" <$> lookupEnv "CIRCLE_PORT"
-     WS.runClient addr (read port) "/" $ \conn -> do WS.sendTextData conn $ T.pack $ "/replay " ++ sessionName
+     WS.runClient addr (read port) "/" $ \conn -> do WS.sendTextData conn $ T.pack $ "/replay " ++ sessionName ++ " " ++ offset
                                                      msg <- WS.receiveData conn
                                                      putStrLn $ T.unpack msg
                                                      msg <- WS.receiveData conn
