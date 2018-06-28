@@ -1,0 +1,10 @@
+
+- disable ctrl - z
+- control speed
+- more diverse sounds
+- three channels
+
+
+- donk1 donk2 donk3
+- three3 - cps 0.75
+- crofton1
