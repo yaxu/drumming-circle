@@ -4,9 +4,6 @@ author:
   - name: Alex McLean
     affiliation: Research Institute for the History of Science and Technology, Deutsches Museum
     email: alex@slab.org
-  - name: Renick Bell
-    affiliation: Conductive enterprises
-    email: renick@gmail.com
 abstract: |
   Replace this text with a 100-250 word abstract. You'll find it in the
   'metadata block' at the top of your markdown document), be sure that
@@ -231,7 +228,20 @@ tell them how to solve it.
 
 The installation was live within the week-long Playgrounds exhibition
 in Millennium Gallery in Sheffield, taking place as part of the
-Childrens' Media Conference. The computers 
+Childrens' Media Conference. The computers were set up on the floor of
+the exhibition, as they were in the school, only without keyboards,
+creating a non-interactive installation. The videos of originally
+taken from a camera attached to the ceiling in the school were
+projected back onto the computers from a projector suspended above, so
+that ghostly images of the children could be seen moving around and
+working at the computers. The childrens' keypresses were
+simultaneously replayed in synchrony with the video, so visitors to
+the exhibition could see the children, see what they were typing, and
+hear the rhythms produced from the code they were typing from the
+individual speakers. The knot-coded quipu-like structure was installed
+next to the drumming circle, with photographs of the children making
+them. Small booklets were made to explaining how the project worked,
+and its motivations.
 
 # Additional performance
 
