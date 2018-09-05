@@ -1,0 +1,167 @@
+---
+title: Pattern and Code: Algorithmic Drumming Circles
+author:
+  - name: Alex McLean
+    affiliation: Research Institute for the History of Science and Technology, Deutsches Museum
+    email: alex@slab.org
+abstract: |
+  Replace this text with a 100-250 word abstract. You'll find it in the
+  'metadata block' at the top of your markdown document), be sure that
+  each line of the abstract is indented.
+fontsize: 11pt
+geometry: margin=2cm
+fontfamily: libertine
+fontfamily: inconsolata
+mainfont: Linux Libertine O
+monofont: Inconsolata
+bibliography: references.bib
+...
+
+# Introduction
+
+It is well known that creativity thrives inside constraints. This
+project was to work with a year group of pupils, in order to produce
+an installation at the Playgrounds exhibition in Sheffield UK. It was
+planned to work with year 6s (Y6; 10-11 year olds), but in the last
+stages it turned out they were unavailable, and so year 4 (8-9 year
+olds) stepped in. In addition three year 8 (Y8; 12-13 year olds)
+pupils were available for more focussed work. Ten days were available
+to develop the whole activity.
+
+The theme *Pattern + Code* was chosen for the installation, to explore
+coding from both traditional and contemporary cultural practices. In
+particular, I decided to bring together two activities: *knot coding*
+inspired by the ancient Andean practice of Quipu, and contemporary,
+collaborative *live coding* musical practice. In the following section
+I will briefly introduce knot coding, before outlining the activity
+that is focus of the present paper, algorithmic drumming circles. I
+will then conclude by explaining why I put these two practices
+together and how I plan to bring them much closer together in the
+future.
+
+# Knot coding
+
+Quipu is the ancient pre-Columbian practice of recording information
+using yarn, used in the Andean region to record and pass information
+during the Inka empire (ref Urton). This practice was wiped out by the
+Spanish conquest, and the Quipus that remain have only been partially
+decoded. We do however know that a decimal system of knots was used to
+record numbers, and that other information was recorded with binary
+properties such as the spin direction of yarn, the orientation of
+hitches, as well as the colours of threads.
+
+Inspired by this practice, I worked with Y8 children in Wybourn
+Community Primary in Sheffield, on hiding messages in knots tied into
+yarn. I wanted them to think about how information can be digitally
+represented in string. This could have some motivations from a
+'computational thinking' standpoint, but I really wanted to introduce
+digital art in such a way that was grounded in human cultural
+practice, rather than the demands of the information economy.
+
+The first step was to make Quipu-like strands to work with. This
+involved taking a length of alpaca wool, tying a lollypop stick to one
+end, and standing on the stick while twisting the other end. When the
+twist in the wool gets tight, the two ends are brought together (i.e.,
+the wool is folded in half), and the twist in the wool causes it to
+'self-ply', i.e. twist back on itself to create a new thread that is
+around half the length and twice the thickness. Importantly, the
+strand is not only thicker, but has a loop at one end where the
+original thread was folded in half. In Quipus, this loop is used to
+hitch one strand onto another, creating a non-cyclic tree structure of
+main cord, pendant strands, sub-pendants and so on.
+
+Having each created a Quipu-like strand to work with, we then looked
+at how Inka Quipu-makers recorded numbers with knots. Being a decimal
+system, knots are arranged into units, tens, hundreds and so on up the
+strand, with one being a simple overhand knot (or figure 8 knot in the
+unit position), and other numbers represented by the number of turns
+in a "long knot". 
+
+The children were then set to hide messages in string, given
+additional ready-made Quipu-like strands to work with as well as
+elastic bands and beads. After a half-day sessions with each class,
+the resulting works were hitched on to a single main cord, creating a
+Quipu-like structure for the exhibition.
+
+# Algorithmic drumming circles
+
+Working with Quipus set the scene for the focus of this paper;
+algorithmic drumming circles. Faced with the challenge of working with
+two classes full of children, and limited time, I formed a plan to
+work with groups of eight children. It was of course important for the
+harmony of the school that no children were left out, so this meant
+having around seven sessions, over the two days available.
+
+Each group of eight children was arranged in a circle on the floor,
+each with their own computer and speaker, and used the TidalCycles
+(ref; tidal for short) live coding environment to make music
+together. Each session only lasted one hour, during which I gave them
+a short presentation on the practice of both drumming circles and live
+coding, teached them how to live code with tidal, and recorded a
+drumming circle performance for the installation. Despite the apparent
+impossibility of this task, in two cases there was time to record two
+performances to include in the exhibition. Mainly due to safeguarding
+issues, five recorded performances were kept.
+
+## Hardware
+
+Eight Raspberry Pi computers (version 2) were used, with high quality
+audio outputs from Phat DAC add-on boards, and 7" screens donated by
+sponsor Pimoroni . In addition eight speakers (four pairs of Fostex
+PM0.3d) were used, with a speaker placed under each computer and
+screen, creating an eight-channel drumming circle where each pupil
+could hear their own contribution clearly. I had originally planned to
+use cheaper Pi Zero Ws, but could not obtain the in time for the
+workshops, and had ready access to Pi 2s.
+
+In order to support accurate time synchronisation and tempo
+coordination, and take a live backup of the children's code, an
+ethernet network was used. As well as recording the code, a high
+definition video recording was taken of the circle from the top-down
+by Jon Harrison, by fixing a camera with wide lens to the ceiling. The
+camera also took an audio recording for reference purposes. Rather
+than recording audio, keypresses by the children were recorded so that
+they could be replayed.
+
+## Software
+
+I used the *TidalCycles* environment, with a new, tightly integrated
+text-based editor *FeedForward*, written in the same language as
+TidalCycles; Haskell. This project gave significant impetus to develop
+this editor so that it was stable enough for use by eight year
+olds. Feedforward features include automatic labelling of separate
+patterns, so the usual `d1`, `d2` functions are not required, and
+individual pattern can be easily muted and unmuted with
+hotkeys. Furthermore, each pattern is given a VU meter, giving a
+visual cue of the audio produced by it.
+
+Importantly for this project, FeedForward records keypresses, with
+accurate timestamps, allowing performances to be recorded and played
+back with very high precision and minimal space requirements. These
+data were sent over the network to my laptop, so that they could be
+stored together for later processing, and also as a live backup.
+
+I also added features to TidalCycles itself, mainly because I wanted
+to avoid having to
+
+## Instruction
+
+I had a few different approaches to the drumming circle to try out
+with the first couple of groups of children (who did not have parental
+permission for filming). For example, I had printed example patterns
+onto stickers, stuck onto playing cards, and then dealt out to the
+children. These stickers had different colours to denote drum pattern
+sequences, and functions to transform those sequences.
+
+However, it quickly became clear that any such intervention was a
+distraction from what is most important in a drumming circle: try
+things out, listen to each other, and respond. So I showed them how to
+do sequences,
+
+# Conclusion
+
+Bringing together Quipu and live coding
+
+![*A descriptive caption should be given for all figures, understandable without reference to the rest of the article.*](images/pomeroy.jpg)
+
+# References
