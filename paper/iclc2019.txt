@@ -92,12 +92,21 @@ work with groups of eight children. It was of course important for the
 harmony of the school that no children were left out, so this meant
 having around seven sessions, over the two days available.
 
+** RENICK - para or two on drumming circles
+
+By chance, the children had already partipated in drumming circles
+with real drums earlier in the school year, and so were familiar with
+the concept of playing rhythms together. They were on the whole less
+familiar with coding, although perhaps the earlier knot coding
+activity gave them some ideas about discrete representation and
+pattern.
+
 Each group of eight children was arranged in a circle on the floor,
-each with their own computer and speaker, and used the TidalCycles
-(ref; tidal for short) live coding environment to make music
-together. Each session only lasted one hour, during which I gave them
-a short presentation on the practice of both drumming circles and live
-coding, teached them how to live code with tidal, and recorded a
+each child with their own computer and speaker. They used the
+TidalCycles (ref; tidal for short) live coding environment to make
+music together. Each session only lasted one hour, during which I gave
+them a short presentation on the practice of both drumming circles and
+live coding, teached them how to live code with tidal, and recorded a
 drumming circle performance for the installation. Despite the apparent
 impossibility of this task, in two cases there was time to record two
 performances to include in the exhibition. Mainly due to safeguarding
@@ -112,7 +121,8 @@ PM0.3d) were used, with a speaker placed under each computer and
 screen, creating an eight-channel drumming circle where each pupil
 could hear their own contribution clearly. I had originally planned to
 use cheaper Pi Zero Ws, but could not obtain the in time for the
-workshops, and had ready access to Pi 2s.
+workshops, and had ready access to Pi 2s. The computers had keyboards,
+but not mice.
 
 In order to support accurate time synchronisation and tempo
 coordination, and take a live backup of the children's code, an
@@ -141,10 +151,39 @@ back with very high precision and minimal space requirements. These
 data were sent over the network to my laptop, so that they could be
 stored together for later processing, and also as a live backup.
 
-I also added features to TidalCycles itself, mainly because I wanted
-to avoid having to
+I also added software features to TidalCycles itself in the form of
+the optional `Sound.Tidal.Simple` module, mainly to reduce the amount
+of typing needed to make live music, to a level acceptable to
+non-touch typists. This involved developing Tidal's overloaded string
+feature, so that a sequence will default to being a pattern of
+sounds. This is in addition to automatic inference of separate
+patterns, so rather than typing `d1 $ sound "kick snare"` for a
+minimal kick-snare pattern, only `"kick snare"` is required.
 
-## Instruction
+I also added a number of shorthand pattern transformation functions to
+`Sound.Tidal.Simple`, which all take a single pattern as input and
+return a pattern as output. These additional functions are listed in
+the below table:
+
+name       effect
+---------- ----------
+`crunch`   apply bit crush
+`scratch`  chop each sample into 32 grains and play them backwards
+`louder`   increase the gain
+`quieter`  decrease the gain
+`mute`     replace the pattern with silence
+`jump`     skip forward in time by a quarter cycle
+`higher`   increase playback rate
+`lower`    decrease sample playback rate
+`faster`   increase sample playback rate and play the pattern faster
+`slower`   decrease sample playback rate and play the pattern slower
+
+As well as the above unary pattern transformations, I also introduced
+them to two of tidal's higher order functions, `every` and
+`sometimes`. Even these two functions ad a great deal of variety to
+the overall rhythm, allowing them to patterns such as `every 3 faster "hi*2 ~ lo lo"`. I also showed them how to add additional transformations on top, such as `sometimes crunch $ every 3 faster "hi*2 ~ lo lo"`, explaining that the `$` operator is used for 'gluing together' transformations.
+
+## Instruction and sound
 
 I had a few different approaches to the drumming circle to try out
 with the first couple of groups of children (who did not have parental
@@ -154,9 +193,44 @@ children. These stickers had different colours to denote drum pattern
 sequences, and functions to transform those sequences.
 
 However, it quickly became clear that any such intervention was a
-distraction from what is most important in a drumming circle: try
-things out, listen to each other, and respond. So I showed them how to
-do sequences,
+distraction from what is most important in a drumming circle: trying
+things out, listen to each other, and respond. So rather than handing
+out cards, I showed them how to make pattern sequences and
+transformations on-screen, and gave them time to experiment with each
+example hands-on.
+
+I gave each child only two samples, `hi` and `lo`, to denote the high
+and low tone of many hand drums. Each child had a different pair of
+sound samples, taken from a variety of hand drums, to help them
+differentiate their own patterns from those of the rest of the group,
+which created a rich percussive emsemble. My original intention was to
+use these at the beginning, but then give them additional sounds to
+play with, printed on cards. However as mentioned earlier, I found
+limiting the children to only two sounds each provided constraints to
+encourage them to work creatively with the patterns.
+
+## Result
+
+This project was developed as an arts residency, and no attempt was
+made to evaluate it as a piece of research. The eight-year olds were
+not surveyed for their qualitative or quantitative responses. However
+they did appear to enjoy themselves, all engaged fully with the
+activity throughout, and to my own ears, the musical results were
+extremely good, fluctuating between polyrhythmic grooves and extreme
+noise, with each drumming circle having a distinct character. It was
+particularly nice to see children hear something interesting one of
+their friends was making, run round to have a look at how it was done,
+and then run back to try it out themselves. Syntax errors did crop up,
+whereupon the child would stick their hand up for me to come round and
+tell them how to solve it.
+
+# Installation
+
+The installation was live within the week-long Playgrounds exhibition
+in Millennium Gallery in Sheffield, taking place as part of the
+Childrens' Media Conference. The computers 
+
+# Additional performance
 
 # Conclusion
 
