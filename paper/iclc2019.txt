@@ -4,6 +4,9 @@ author:
   - name: Alex McLean
     affiliation: Research Institute for the History of Science and Technology, Deutsches Museum
     email: alex@slab.org
+  - name: Renick Bell
+    affiliation: Conductive enterprises
+    email: renick@gmail.com
 abstract: |
   Replace this text with a 100-250 word abstract. You'll find it in the
   'metadata block' at the top of your markdown document), be sure that
