@@ -1,5 +1,5 @@
 ---
-title: Pattern and Code: Algorithmic Drumming Circles
+title: Pattern, Code and Algorithmic Drumming Circles, A Report
 author:
   - name: Alex McLean
     affiliation: Research Institute for the History of Science and Technology, Deutsches Museum
@@ -24,12 +24,12 @@ bibliography: references.bib
 
 It is well known that creativity thrives inside constraints. This
 project was to work with a year group of pupils, in order to produce
-an installation at the Playgrounds exhibition in Sheffield UK. It was
-planned to work with year 6s (Y6; 10-11 year olds), but in the last
-stages it turned out they were unavailable, and so year 4 (8-9 year
-olds) stepped in. In addition three year 8 (Y8; 12-13 year olds)
-pupils were available for more focussed work. Ten days were available
-to develop the whole activity.
+an installation at the Playgrounds exhibition in Sheffield, Yorkshire
+UK. It was planned to work with year 6s (Y6; 10-11 year olds), but in
+the last stages it turned out they were unavailable, and so year 4
+(8-9 year olds) stepped in. In addition three year 8 (Y8; 12-13 year
+olds) pupils were available for more focussed work. Ten days were
+available to develop the whole activity.
 
 The theme *Pattern + Code* was chosen for the installation, to explore
 coding from both traditional and contemporary cultural practices. In
@@ -200,32 +200,19 @@ distraction from what is most important in a drumming circle: trying
 things out, listen to each other, and respond. So rather than handing
 out cards, I showed them how to make pattern sequences and
 transformations on-screen, and gave them time to experiment with each
-example hands-on.
+example hands-on. Syntax errors did crop up, whereupon the child would
+stick their hand up for me to come round and help them fix their code.
 
-I gave each child only two samples, `hi` and `lo`, to denote the high
-and low tone of many hand drums. Each child had a different pair of
-sound samples, taken from a variety of hand drums, to help them
-differentiate their own patterns from those of the rest of the group,
-which created a rich percussive emsemble. My original intention was to
-use these at the beginning, but then give them additional sounds to
-play with, printed on cards. However as mentioned earlier, I found
-limiting the children to only two sounds each provided constraints to
-encourage them to work creatively with the patterns.
-
-## Result
-
-This project was developed as an arts residency, and no attempt was
-made to evaluate it as a piece of research. The eight-year olds were
-not surveyed for their qualitative or quantitative responses. However
-they did appear to enjoy themselves, all engaged fully with the
-activity throughout, and to my own ears, the musical results were
-extremely good, fluctuating between polyrhythmic grooves and extreme
-noise, with each drumming circle having a distinct character. It was
-particularly nice to see children hear something interesting one of
-their friends was making, run round to have a look at how it was done,
-and then run back to try it out themselves. Syntax errors did crop up,
-whereupon the child would stick their hand up for me to come round and
-tell them how to solve it.
+I gave each child only two samples each, named `hi` and `lo`, to
+denote the high and low tone of many hand drums. Each child had a
+different pair of sound samples, taken from a variety of hand drums,
+to help them differentiate their own patterns from those of the rest
+of the group, which created a rich percussive emsemble. My original
+intention was to use these at the beginning, but then give them
+additional sounds to play with, printed on cards. However as mentioned
+earlier, I found limiting the children to only two sounds each
+provided constraints to encourage them to work creatively with the
+patterns.
 
 # Installation
 
@@ -246,11 +233,56 @@ next to the drumming circle, with photographs of the children making
 them. Small booklets were made to explaining how the project worked,
 and its motivations.
 
-# Additional performance
+The projection could have been a little brighter, and the acoustics of
+the room a little more dryer, but the children did an amazing job, and
+this came through well in installation form. The children themselves
+visited the gallery, and reports are that they enjoyed re-watching
+their drumming circles (and stepping on each other's projected forms).
+
+# Live performance
+
+I also worked with three older pupils, this time 12-13 year olds from
+Crofton Academy school in Wakefield, also in Yorkshire UK. This was in
+collaboration with the Wakefield sensory support service there, with a
+view to exploring tactile interfaces through participatory design, but
+the visual impairments of the participants was not a factor in the
+present project. We had around five hours of learning and practice
+over two sessions together, together with their more advanced years
+allowing a much wider exploration of Tidal's functions and sounds. We
+also recorded new sounds for the children to use. I joined them in the
+performance, forming a live code quartet, to a large audience largely
+consisting of pupils from another local primary school. The live
+coders did brilliantly, causing the whole audience to spontaneously
+stand up and start dancing.
 
 # Conclusion
 
-Bringing together Quipu and live coding
+This project was developed as an arts residency, and no attempt was
+made to evaluate it as a piece of research. The eight-year olds were
+not surveyed for their qualitative or quantitative responses. However
+they all engaged fully with the activity throughout, and to my own
+ears, the musical results were extremely good, fluctuating between
+polyrhythmic grooves and extreme noise, with each drumming circle
+having a distinct character. It was particularly nice to see children
+hear something interesting one of their friends was making, run round
+to have a look at how it was done, and then run back to try it out
+themselves. 
+
+Further development is ongoing towards a follow-on installation. I am
+particularly keen to make the next iteration interactive, providing an
+additional computer or two allowing visitors to join in with the live
+code being played back.
+
+More fundamentally, I am keen to explore how Quipu-like textile
+structures could be used as an interface to live coding. Both Quipu
+and computer lanugage is structured as a syntactical tree, and being
+able to describe computational, musical patterns through such textile
+structures appears to be an area ripe with possibilities. It is easy
+to forget that historical technologies such as Quipus perished through
+external factors and not necessary through any lack. The practice of
+quipu-making was developed and refined over a far longer period than
+contemporary silicone-based technology, and so we must surely a great
+deal to learn from it.
 
 ![*A descriptive caption should be given for all figures, understandable without reference to the rest of the article.*](images/pomeroy.jpg)
 
