@@ -1,15 +1,9 @@
 ---
-title: 'Your paper title goes here'
+title: Pattern and Code: Algorithmic Drumming Circles
 author:
-  - name: First Author
-    affiliation: Affiliation1
-    email: author1@mcmaster.ca
-  - name: Second Author
-    affiliation: Affiliation2
-    email: author2@sussex.ac.uk
-  - name: Author three
-    affiliation: Affiliation3
-    email: author3@roulette.mx
+  - name: Alex McLean
+    affiliation: Research Institute for the History of Science and Technology, Deutsches Museum
+    email: alex@slab.org
 abstract: |
   Replace this text with a 100-250 word abstract. You'll find it in the
   'metadata block' at the top of your markdown document), be sure that
@@ -25,161 +19,149 @@ bibliography: references.bib
 
 # Introduction
 
-Welcome to the markdown (aka commonmark) template for the
-International Conference on Live Coding 2019.
+It is well known that creativity thrives inside constraints. This
+project was to work with a year group of pupils, in order to produce
+an installation at the Playgrounds exhibition in Sheffield UK. It was
+planned to work with year 6s (Y6; 10-11 year olds), but in the last
+stages it turned out they were unavailable, and so year 4 (8-9 year
+olds) stepped in. In addition three year 8 (Y8; 12-13 year olds)
+pupils were available for more focussed work. Ten days were available
+to develop the whole activity.
 
-This document is a guide to using markdown for the conference, and is
-itself written in markdown. For full understanding, refer to
-iclc2019.txt to see the source of this document, and iclc2019.pdf to
-see the typeset output. Use of this template is currently only
-recommended for those familiar with commandline tools.
+The theme *Pattern + Code* was chosen for the installation, to explore
+coding from both traditional and contemporary cultural practices. In
+particular, I decided to bring together two activities: *knot coding*
+inspired by the ancient Andean practice of Quipu, and contemporary,
+collaborative *live coding* musical practice. In the following section
+I will briefly introduce knot coding, before outlining the activity
+that is focus of the present paper, algorithmic drumming circles. I
+will then conclude by explaining why I put these two practices
+together and how I plan to bring them much closer together in the
+future.
 
-We suggest you take a copy of this template (iclc2019.txt), and use it
-as a starting point for your ICLC paper.
+# Knot coding
 
-Preparing your submission using markdown will enable us to make proceedings
-available both in PDF files suitable for print, and in HTML suitable
-for the web. This is useful for making sure your paper is fully
-accessible, via Internet search, and with assistive technology such as
-screen readers for blind people. We recommend taking a straightforward approach to
-formatting your document.
+Quipu is the ancient pre-Columbian practice of recording information
+using yarn, used in the Andean region to record and pass information
+during the Inka empire (ref Urton). This practice was wiped out by the
+Spanish conquest, and the Quipus that remain have only been partially
+decoded. We do however know that a decimal system of knots was used to
+record numbers, and that other information was recorded with binary
+properties such as the spin direction of yarn, the orientation of
+hitches, as well as the colours of threads.
 
-If you do not wish to use markdown, please do not be discouraged from
-submitting your paper. There is also a word document template
-available from the conference website.
+Inspired by this practice, I worked with Y8 children in Wybourn
+Community Primary in Sheffield, on hiding messages in knots tied into
+yarn. I wanted them to think about how information can be digitally
+represented in string. This could have some motivations from a
+'computational thinking' standpoint, but I really wanted to introduce
+digital art in such a way that was grounded in human cultural
+practice, rather than the demands of the information economy.
 
-# Learning and using markdown
+The first step was to make Quipu-like strands to work with. This
+involved taking a length of alpaca wool, tying a lollypop stick to one
+end, and standing on the stick while twisting the other end. When the
+twist in the wool gets tight, the two ends are brought together (i.e.,
+the wool is folded in half), and the twist in the wool causes it to
+'self-ply', i.e. twist back on itself to create a new thread that is
+around half the length and twice the thickness. Importantly, the
+strand is not only thicker, but has a loop at one end where the
+original thread was folded in half. In Quipus, this loop is used to
+hitch one strand onto another, creating a non-cyclic tree structure of
+main cord, pendant strands, sub-pendants and so on.
 
-We are happy to answer any questions you have about markdown in connection with your
-conference submission.
+Having each created a Quipu-like strand to work with, we then looked
+at how Inka Quipu-makers recorded numbers with knots. Being a decimal
+system, knots are arranged into units, tens, hundreds and so on up the
+strand, with one being a simple overhand knot (or figure 8 knot in the
+unit position), and other numbers represented by the number of turns
+in a "long knot". 
 
-This is best done via our online community forum:
-  [http://lurk.org/groups/lcrn/](http://lurk.org/groups/lcrn/)
+The children were then set to hide messages in string, given
+additional ready-made Quipu-like strands to work with as well as
+elastic bands and beads. After a half-day sessions with each class,
+the resulting works were hitched on to a single main cord, creating a
+Quipu-like structure for the exhibition.
 
-Alternatively you may email the conference chairs directly:
-  [iclc2019@easychair.org](mailto:iclc2019@easychair.org)
+# Algorithmic drumming circles
 
-## Running pandoc {#pandoc}
+Working with Quipus set the scene for the focus of this paper;
+algorithmic drumming circles. Faced with the challenge of working with
+two classes full of children, and limited time, I formed a plan to
+work with groups of eight children. It was of course important for the
+harmony of the school that no children were left out, so this meant
+having around seven sessions, over the two days available.
 
-Pandoc is software which turns text written in markdown into a
-beautiful looking document, complete with references. You will need to
-run it to create PDF documents of your paper for checking and
-uploading for peer review.
+Each group of eight children was arranged in a circle on the floor,
+each with their own computer and speaker, and used the TidalCycles
+(ref; tidal for short) live coding environment to make music
+together. Each session only lasted one hour, during which I gave them
+a short presentation on the practice of both drumming circles and live
+coding, teached them how to live code with tidal, and recorded a
+drumming circle performance for the installation. Despite the apparent
+impossibility of this task, in two cases there was time to record two
+performances to include in the exhibition. Mainly due to safeguarding
+issues, five recorded performances were kept.
 
-You may download pandoc for all major operating systems (including MS
-Windows, Apple Mac OS and GNU/Linux) from the following website:
-[http://pandoc.org/](http://pandoc.org/)
+## Hardware
 
-As an alternative to the above downloads, on OS X only, the homebrew
-package manager can be used to install pandoc: [http://brew.sh/](http://brew.sh/)
+Eight Raspberry Pi computers (version 2) were used, with high quality
+audio outputs from Phat DAC add-on boards, and 7" screens donated by
+sponsor Pimoroni . In addition eight speakers (four pairs of Fostex
+PM0.3d) were used, with a speaker placed under each computer and
+screen, creating an eight-channel drumming circle where each pupil
+could hear their own contribution clearly. I had originally planned to
+use cheaper Pi Zero Ws, but could not obtain the in time for the
+workshops, and had ready access to Pi 2s.
 
-If you use homebrew to install on OS X you will need to install both the pandoc
-and pandoc-citeproc packages as follows:
-```
-brew update
-brew install pandoc
-brew install pandoc-citeproc
-```
+In order to support accurate time synchronisation and tempo
+coordination, and take a live backup of the children's code, an
+ethernet network was used. As well as recording the code, a high
+definition video recording was taken of the circle from the top-down
+by Jon Harrison, by fixing a camera with wide lens to the ceiling. The
+camera also took an audio recording for reference purposes. Rather
+than recording audio, keypresses by the children were recorded so that
+they could be replayed.
 
-To produce PDF files you will need to have LaTeX installed, as well as
-pandoc. See the pandoc website for installation instructions:
-[http://pandoc.org/installing.html](http://pandoc.org/installing.html). LaTeX
-is used internally, you will not have to edit any LaTeX documents.
+## Software
 
-To render your markdown source as HTML, open a terminal window, change
-into the folder where the template is and run the following command:
+I used the *TidalCycles* environment, with a new, tightly integrated
+text-based editor *FeedForward*, written in the same language as
+TidalCycles; Haskell. This project gave significant impetus to develop
+this editor so that it was stable enough for use by eight year
+olds. Feedforward features include automatic labelling of separate
+patterns, so the usual `d1`, `d2` functions are not required, and
+individual pattern can be easily muted and unmuted with
+hotkeys. Furthermore, each pattern is given a VU meter, giving a
+visual cue of the audio produced by it.
 
-~~~~ {.bash}
-pandoc --template=pandoc/iclc.html --filter pandoc-citeproc -N iclc2019.txt -o iclc2019.html
-~~~~
+Importantly for this project, FeedForward records keypresses, with
+accurate timestamps, allowing performances to be recorded and played
+back with very high precision and minimal space requirements. These
+data were sent over the network to my laptop, so that they could be
+stored together for later processing, and also as a live backup.
 
-To produce a PDF document, make sure you have LaTeX installed (see
-above), and run the following:
+I also added features to TidalCycles itself, mainly because I wanted
+to avoid having to
 
-~~~~ {.bash}
-pandoc --template=pandoc/iclc.latex --filter pandoc-citeproc -N iclc2019.txt -o iclc2019.pdf
-~~~~
+## Instruction
 
-For a higher quality output, add the option `--latex-engine=xelatex`
-to the above. You will need the [Inconsolata](http://levien.com/type/myfonts/inconsolata.html) and [Linux Libertine](http://www.linuxlibertine.org/index.php?id=91&L=1) opentype fonts installed.
+I had a few different approaches to the drumming circle to try out
+with the first couple of groups of children (who did not have parental
+permission for filming). For example, I had printed example patterns
+onto stickers, stuck onto playing cards, and then dealt out to the
+children. These stickers had different colours to denote drum pattern
+sequences, and functions to transform those sequences.
 
-An example Makefile is also provided to run these commands for you.
-
-## Bibliographic references
-
-Pandoc accepts bibliographic databases in a range of formats, so make
-sure you have the right extension on your file.
-
-  Format            File extension
-  ------------      --------------
-  MODS              .mods
-  BibLaTeX          .bib
-  BibTeX            .bibtex
-  RIS               .ris
-  EndNote           .enl
-  EndNote XML       .xml
-  ISI               .wos
-  MEDLINE           .medline
-  Copac             .copac
-  JSON citeproc     .json
-
-Table: Supported bibliography formats with file extension.
-
-Authors may be referenced in two ways; inline, e.g. @Schwitters32
-wrote the Ursonate sound poem, or in parenthesis, e.g. Ursonate is a
-sound poem [@Schwitters32]. Multiple references should be grouped
-together like so [@Schwitters32;@Miller56;@Greenewalt46].
-
-The pandoc command given in the [above section](#pandoc) will automatically
-render your references according to Chicago author-date style.
-
-At the head of the markdown source file for this template, you will see an entry
-for "bibliography" that points to the file references.bib. Here you'll find
-examples of bibliography entries in BibLaTex format, including examples for
-articles, books, book chapters and items from conference proceedings.
-
-## Code
-
-We have chosen a single column layout to better support code examples
-without having to break lines. The following shows how to include a
-code example with syntax highlighting:
-
-~~~~ {.haskell}
-d1 $ every 3 (iter 4) $ brak $ "bd [sn [[sn bd] sn]]*1/3"
-~~~~
-
-For a list of supported languages, you can visit this page:
-[http://johnmacfarlane.net/highlighting-kate/]
-
-If your favourite language isn't listed, perhaps a language with a
-similar syntax will still work.
-
-## Figures
-
-Images should be included as figures, with captions provided and
-formatted as shown in Figure 1. Be prepared for the page layout and
-image size to be changed during the editing and layout process, and
-consider this when referring to the figures in the text.
-
-![*A descriptive caption should be given for all figures, understandable without reference to the rest of the article.*](images/pomeroy.jpg)
+However, it quickly became clear that any such intervention was a
+distraction from what is most important in a drumming circle: try
+things out, listen to each other, and respond. So I showed them how to
+do sequences,
 
 # Conclusion
 
-We look forward to receiving your completed papers. Submission is through the
-online peer review system at http://iclc2016.mcmaster.ca only. Do not send papers
-directly by e-mail. In all cases, please submit a PDF version of your paper for
-peer review. At a later stage in preparing the proceedings, we may ask for the
-markdown or Word versions of your paper.
+Bringing together Quipu and live coding
 
-## Acknowledgments
-
-At the end of the Conclusions, acknowledgements to people, projects, funding
-agencies, etc. can be included after the second-level heading “Acknowledgments”.
-
-Again, if you have any questions or problems, please share them on the forum:
-  http://lurk.org/groups/lcrn/
-
-Or email conference chair Jesus Jara directly:
-  iclc2019@livecodemad.org
+![*A descriptive caption should be given for all figures, understandable without reference to the rest of the article.*](images/pomeroy.jpg)
 
 # References
