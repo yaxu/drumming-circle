@@ -32,6 +32,7 @@ import Data.Unique
 port = 6010
 
 data Client = Client {cName :: String,
+                      cGroup :: Maybe String,
                       cServerThread :: ThreadId,
                       cSender :: String -> IO (),
                       cFH :: Maybe Handle,
@@ -65,6 +66,7 @@ run = do
     WS.forkPingThread conn 30
     uniqueId <- liftIO newUnique
     let client = Client {cName = "anonymous",
+                         cGroup = Nothing,
                          cServerThread = senderThreadId,
                          cSender = sender,
                          cFH = Nothing,
@@ -114,6 +116,7 @@ takeNumbers xs = (takeWhile f xs, dropWhile (== ' ') $ dropWhile f xs)
   where f x = not . null $ filter (x ==) "0123456789."
 
 commands = [("name", act_name),
+            ("group", act_group),
             ("change", act_change),
             ("takeSnapshots", act_takeSnapshots),
             ("replay", act_replay)
@@ -153,11 +156,24 @@ act_name param _ client conn =
      cSender client $ "/name ok hello " ++ param
      return $ client {cName = param}
 
+act_group :: String -> MVar [Client] -> Client -> WS.Connection -> IO (Client)
+act_group param _ client conn =
+  do putStrLn $ "group: '" ++ param ++ "'"
+     cSender client $ "/name ok group " ++ param
+     return $ client {cGroup = Just param}
+
 act_change :: String -> MVar [Client] -> Client -> WS.Connection -> IO (Client)
-act_change param _ client conn =
+act_change param mClients client conn =
   do fh <- getFH (cFH client)
      hPutStrLn fh $ "//"
      hPutStrLn fh param
+     when (isJust $ cGroup client) $
+       do clients <- takeMVar mClients
+          let senders = map cSender $ filter ((== (cGroup client)) . cGroup) clients
+          hPutStrLn stderr $ "sending to " ++ (show $ length senders) ++ " members of group " ++ (fromJust $ cGroup client)
+          mapM_ ($ "/change " ++ param) senders
+          putMVar mClients clients
+          
      hFlush fh
      return (client {cFH = Just fh})
        where getFH (Just fh) = return fh
